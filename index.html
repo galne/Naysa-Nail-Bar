@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Nail Studio | Manicure, Pedicure & Nail Art</title>
-  <meta name="description" content="Minimal nail studio για manicure, pedicure, gel, ημιμόνιμο και nail art. Κλείστε εύκολα το ραντεβού σας online." />
+  <title>Naysa Nail Bar | Μανικιούρ, Πεντικιούρ & Nail Art στη Νέα Ιωνία</title>
+  <meta name="description" content="Naysa Nail Bar στη Νέα Ιωνία. Μανικιούρ, πεντικιούρ, ημιμόνιμο, τεχνητά νύχια, lash lift, αποτρίχωση και περιποίηση φρυδιών." />
 
   <style>
     :root {
@@ -20,6 +20,7 @@
       --border: #e7ded2;
       --dark: #1f1b18;
       --viber: #7360f2;
+      --gold: #f7b733;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +37,12 @@
 
     a { text-decoration: none; color: inherit; }
 
-    img { width: 100%; display: block; }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     .container {
       width: min(1140px, 92%);
@@ -59,7 +65,7 @@
 
     .section-title p {
       color: var(--muted);
-      max-width: 620px;
+      max-width: 680px;
       margin: auto;
     }
 
@@ -89,16 +95,13 @@
     }
 
     .logo-placeholder {
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       border: 1px solid var(--border);
       border-radius: 50%;
       background: var(--white);
-      color: var(--accent-dark);
-      display: grid;
-      place-items: center;
-      font-size: 11px;
-      font-weight: 700;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
     nav {
@@ -107,6 +110,8 @@
       color: var(--muted);
       font-size: 14px;
     }
+
+    nav a:hover { color: var(--text); }
 
     .header-btn {
       background: var(--text);
@@ -183,15 +188,10 @@
     }
 
     .hero-photo {
-      min-height: 420px;
+      min-height: 430px;
       border-radius: 28px;
       background: var(--soft);
       border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: var(--muted);
-      padding: 24px;
       overflow: hidden;
     }
     /* telos kodika hero */
@@ -260,7 +260,7 @@
     /* arxi kodika slideshow about */
     .slideshow-card {
       position: relative;
-      min-height: 420px;
+      min-height: 430px;
       border-radius: 30px;
       overflow: hidden;
       background: var(--soft);
@@ -291,7 +291,7 @@
     .slide-content {
       position: relative;
       z-index: 1;
-      max-width: 520px;
+      max-width: 540px;
     }
 
     .slide-content h3 {
@@ -302,10 +302,25 @@
 
     .slide-content p { color: #f3eee6; }
 
-    .slide:nth-child(1) { animation-delay: 0s; background-image: linear-gradient(#ddd,#ddd); }
-    .slide:nth-child(2) { animation-delay: 4s; background-image: linear-gradient(#cfc6bc,#cfc6bc); }
-    .slide:nth-child(3) { animation-delay: 8s; background-image: linear-gradient(#bfb3a5,#bfb3a5); }
-    .slide:nth-child(4) { animation-delay: 12s; background-image: linear-gradient(#a99d90,#a99d90); }
+    .slide:nth-child(1) {
+      animation-delay: 0s;
+      background-image: url("https://cdn1.treatwell.net/images/view/v2.i7390786.w720.h480.x87CC3332/");
+    }
+
+    .slide:nth-child(2) {
+      animation-delay: 4s;
+      background-image: url("https://cdn1.treatwell.net/images/view/v2.i7390788.w720.h480.xC4BA6CD3/");
+    }
+
+    .slide:nth-child(3) {
+      animation-delay: 8s;
+      background-image: url("https://cdn1.treatwell.net/images/view/v2.i7390787.w720.h480.x5B7E8448/");
+    }
+
+    .slide:nth-child(4) {
+      animation-delay: 12s;
+      background-image: url("https://cdn1.treatwell.net/images/view/v2.i7390796.w720.h480.x2B57412E/");
+    }
 
     @keyframes fadeSlide {
       0% { opacity: 0; transform: scale(1.02); }
@@ -316,18 +331,18 @@
     }
     /* telos kodika slideshow about */
 
-    /* arxi kodika price list */
-    .price-box {
+    /* arxi kodika service list */
+    .service-list {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 28px;
       padding: 28px;
-      max-width: 780px;
+      max-width: 860px;
       margin: auto;
       box-shadow: 0 16px 40px rgba(31, 27, 24, 0.05);
     }
 
-    .price-row {
+    .service-list-row {
       display: flex;
       justify-content: space-between;
       gap: 20px;
@@ -335,12 +350,12 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .price-row:last-child { border-bottom: none; }
+    .service-list-row:last-child { border-bottom: none; }
 
-    .price-row span { color: var(--muted); }
+    .service-list-row span { color: var(--muted); }
 
-    .price-row strong { white-space: nowrap; }
-    /* telos kodika price list */
+    .service-list-row strong { color: var(--text); }
+    /* telos kodika service list */
 
     /* arxi kodika gallery carousel */
     .gallery-scroll {
@@ -354,16 +369,12 @@
 
     .gallery-card {
       flex: 0 0 min(78vw, 340px);
-      min-height: 420px;
+      height: 420px;
       border-radius: 26px;
       background: var(--soft);
       border: 1px solid var(--border);
       scroll-snap-align: start;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: var(--muted);
-      padding: 18px;
+      overflow: hidden;
     }
     /* telos kodika gallery carousel */
 
@@ -378,11 +389,11 @@
       display: flex;
       gap: 16px;
       width: max-content;
-      animation: reviewScroll 28s linear infinite;
+      animation: reviewScroll 32s linear infinite;
     }
 
     .review {
-      width: min(82vw, 360px);
+      width: min(82vw, 370px);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 24px;
@@ -391,7 +402,7 @@
     }
 
     .stars {
-      color: var(--accent-dark);
+      color: var(--gold);
       font-weight: 700;
       margin-bottom: 10px;
       letter-spacing: 1px;
@@ -426,7 +437,7 @@
     .booking-box p {
       color: #ded8d1;
       margin: 0 auto 26px;
-      max-width: 640px;
+      max-width: 680px;
     }
 
     .booking-box .btn-main {
@@ -499,10 +510,7 @@
       margin-bottom: 10px;
     }
 
-    .hours-list {
-      display: grid;
-      gap: 10px;
-    }
+    .hours-list { display: grid; gap: 10px; }
 
     .hour-row {
       display: flex;
@@ -517,11 +525,15 @@
 
     .map-box {
       grid-column: 1 / -1;
-      min-height: 300px;
-      display: grid;
-      place-items: center;
-      color: var(--muted);
-      text-align: center;
+      min-height: 360px;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 360px;
+      display: block;
     }
     /* telos kodika contact hours */
 
@@ -548,9 +560,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero-photo {
-        min-height: 340px;
-      }
+      .hero-photo { min-height: 340px; }
     }
 
     @media (max-width: 560px) {
@@ -560,13 +570,9 @@
 
       .header-btn { display: none; }
 
-      .services {
-        grid-template-columns: 1fr;
-      }
+      .services { grid-template-columns: 1fr; }
 
-      .hero {
-        padding-top: 28px;
-      }
+      .hero { padding-top: 28px; }
 
       .hero-card {
         border-radius: 28px;
@@ -574,24 +580,19 @@
         gap: 24px;
       }
 
-      .hero-buttons a {
-        width: 100%;
-      }
+      .hero-buttons a { width: 100%; }
 
-      .hero-photo {
-        min-height: 300px;
-      }
+      .hero-photo { min-height: 310px; }
 
-      .slideshow-card {
-        min-height: 430px;
-      }
+      .slideshow-card { min-height: 430px; }
 
       .gallery-card {
         flex-basis: 84vw;
-        min-height: 380px;
+        height: 380px;
       }
 
-      .price-row {
+      .service-list-row,
+      .hour-row {
         flex-direction: column;
         gap: 4px;
       }
@@ -621,8 +622,10 @@
   <header>
     <div class="container header-inner">
       <div class="logo-area">
-        <div class="logo-placeholder">LOGO</div>
-        <span>Nail Studio</span>
+        <div class="logo-placeholder">
+          <img src="https://scontent.fath6-1.fna.fbcdn.net/v/t39.30808-6/241273004_107456768339834_3930582701612840321_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=72g_Ng1Bo1YQ7kNvwFTBoi-&_nc_oc=AdrPUA-eKKSnxJhJ815SXb6GJPeGgmOlqBXSp4Jqtk9OpBhrSJvO_CPH10DKSeGD_LZtGQVsY2CIH1SBMXAM6p92&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=IjrhDjlnOlA-yONfN1LL5w&_nc_ss=7b2a8&oh=00_Af4eeX1dBodicqv9deSlhtFPvxHoXQN04g5mO8LSGxtisw&oe=6A1D7682" alt="Naysa Nail Bar logo">
+        </div>
+        <span>Naysa Nail Bar</span>
       </div>
 
       <nav>
@@ -632,7 +635,9 @@
         <a href="#contact">Επικοινωνία</a>
       </nav>
 
-      <a class="header-btn" href="https://www.treatwell.gr/" target="_blank">Ραντεβού</a>
+      <a class="header-btn" href="https://www.treatwell.gr/katasthma/naysa-nail-bar/" target="_blank">
+        Προφίλ Treatwell
+      </a>
     </div>
   </header>
   <!-- telos kodika header -->
@@ -640,7 +645,7 @@
   <!-- arxi kodika viber slide button -->
   <a class="viber-slide" href="viber://chat?number=%2B306900000000">
     <span class="viber-icon">V</span>
-    <span>Μήνυμα</span>
+    <span>Viber</span>
   </a>
   <!-- telos kodika viber slide button -->
 
@@ -649,18 +654,23 @@
     <div class="container">
       <div class="hero-card">
         <div>
-          <div class="label">Manicure • Pedicure • Nail Art</div>
-          <h1>Καθαρή αισθητική. Προσεγμένα νύχια. Ήρεμη εμπειρία.</h1>
-          <p>Ένα minimal nail studio για γυναίκες που θέλουν όμορφο αποτέλεσμα, λεπτομέρεια και περιποίηση χωρίς υπερβολές.</p>
+          <div class="label">Nail studio στη Νέα Ιωνία</div>
+          <h1>Περιποίηση νυχιών με καθαρή αισθητική και λεπτομέρεια.</h1>
+          <p>
+            Στο Naysa Nail Bar θα βρείτε υπηρεσίες μανικιούρ, πεντικιούρ, ημιμόνιμου,
+            τεχνητών νυχιών, lash lift, φρυδιών και αποτρίχωσης σε έναν προσεγμένο χώρο.
+          </p>
 
           <div class="hero-buttons">
-            <a class="btn-main" href="https://www.treatwell.gr/" target="_blank">Κλείσε Ραντεβού</a>
-            <a class="btn-light" href="#gallery">Δες Δουλειές</a>
+            <a class="btn-main" href="https://www.treatwell.gr/katasthma/naysa-nail-bar/" target="_blank">
+              Δείτε το προφίλ μας στο Treatwell
+            </a>
+            <a class="btn-light" href="#gallery">Δείτε δουλειές μας</a>
           </div>
         </div>
 
         <div class="hero-photo">
-          Βάλε εδώ hero φωτογραφία με νύχια ή φωτογραφία από τον χώρο
+          <img src="https://scontent.fath6-1.fna.fbcdn.net/v/t39.30808-6/470595522_598304059255100_4480326518961250016_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=gkvXPEh2VRQQ7kNvwGRp0jI&_nc_oc=Adqav_g3muMtOyFs8fIZ3UVwyblSjpiNs7PmbJaTdGD-POUzrp34HN4NqJyBdvlLzlURA5hyBdaF85tDuMvjlDB-&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=NIDUx4aZlK8UpKBa4N-8LQ&_nc_ss=7b2a8&oh=00_Af7254NBcF9sJTkocLncNCPieY1k5zKxLOwL5tit_9TLWA&oe=6A1D7000" alt="Naysa Nail Bar">
         </div>
       </div>
     </div>
@@ -672,14 +682,14 @@
     <div class="container">
       <div class="section-title">
         <h2>Υπηρεσίες</h2>
-        <p>Οι βασικές υπηρεσίες που μπορεί να προσφέρει ένα premium nail studio.</p>
+        <p>Οι βασικές υπηρεσίες του Naysa Nail Bar για νύχια, βλέμμα, φρύδια και περιποίηση.</p>
       </div>
 
       <div class="services">
-        <div class="service-card"><div class="service-number">01</div><h3>Ημιμόνιμο</h3><p>Καθαρό αποτέλεσμα, σωστή εφαρμογή και μεγάλη διάρκεια.</p></div>
-        <div class="service-card"><div class="service-number">02</div><h3>Gel Ενίσχυση</h3><p>Ιδανικό για πιο σταθερό σχήμα και πιο προσεγμένη εικόνα.</p></div>
-        <div class="service-card"><div class="service-number">03</div><h3>Pedicure</h3><p>Περιποίηση άκρων με αίσθηση καθαριότητας και φροντίδας.</p></div>
-        <div class="service-card"><div class="service-number">04</div><h3>Nail Art</h3><p>Minimal σχέδια ή πιο ιδιαίτερες λεπτομέρειες, ανάλογα με το στιλ σας.</p></div>
+        <div class="service-card"><div class="service-number">01</div><h3>Μανικιούρ</h3><p>Μανικιούρ, ημιμόνιμο, σχήμα και χρώμα για καθαρό αποτέλεσμα.</p></div>
+        <div class="service-card"><div class="service-number">02</div><h3>Πεντικιούρ</h3><p>Πεντικιούρ, ημιμόνιμο και θεραπευτική περιποίηση ποδιών.</p></div>
+        <div class="service-card"><div class="service-number">03</div><h3>Τεχνητά Νύχια</h3><p>Ενίσχυση, συντήρηση και αφαίρεση τεχνητών νυχιών.</p></div>
+        <div class="service-card"><div class="service-number">04</div><h3>Lash & Brows</h3><p>Lash lift, καθαρισμός φρυδιών και βαφή φρυδιών ή βλεφαρίδων.</p></div>
       </div>
     </div>
   </section>
@@ -692,28 +702,28 @@
         <div class="slide">
           <div class="slide-content">
             <h3>Δημιουργίες με λεπτομέρεια</h3>
-            <p>Βάλε εδώ φωτογραφία με νύχια ή nail art.</p>
+            <p>Αποτελέσματα που συνδυάζουν καθαρή τεχνική και αισθητική.</p>
           </div>
         </div>
 
         <div class="slide">
           <div class="slide-content">
-            <h3>Ένας καθαρός και ήρεμος χώρος</h3>
-            <p>Βάλε εδώ φωτογραφία από το εσωτερικό του καταστήματος.</p>
+            <h3>Ένας χώρος για περιποίηση</h3>
+            <p>Η εμπειρία ξεκινά από την αίσθηση του χώρου.</p>
           </div>
         </div>
 
         <div class="slide">
           <div class="slide-content">
-            <h3>Η εμπειρία ξεκινά από την πρώτη εικόνα</h3>
-            <p>Βάλε εδώ φωτογραφία από την είσοδο ή την πρόσοψη.</p>
+            <h3>Νύχια για κάθε στιλ</h3>
+            <p>Από minimal μέχρι πιο ιδιαίτερες επιλογές.</p>
           </div>
         </div>
 
         <div class="slide">
           <div class="slide-content">
             <h3>Περιποίηση χωρίς βιασύνη</h3>
-            <p>Βάλε εδώ φωτογραφία από χώρο αναμονής ή λεπτομέρεια υπηρεσίας.</p>
+            <p>Με έμφαση στη λεπτομέρεια και στο τελικό αποτέλεσμα.</p>
           </div>
         </div>
       </div>
@@ -721,23 +731,29 @@
   </section>
   <!-- telos kodika slideshow about -->
 
-  <!-- arxi kodika price list -->
-  <section id="prices">
+  <!-- arxi kodika service list -->
+  <section id="service-list">
     <div class="container">
       <div class="section-title">
-        <h2>Ενδεικτικός τιμοκατάλογος</h2>
-        <p>Οι τιμές μπορούν να προσαρμοστούν ανάλογα με την υπηρεσία και το nail studio.</p>
+        <h2>Ενδεικτικές υπηρεσίες</h2>
+        <p>Για πλήρη λίστα υπηρεσιών και διαθεσιμότητα, επισκεφθείτε το προφίλ του Naysa Nail Bar στο Treatwell.</p>
       </div>
 
-      <div class="price-box">
-        <div class="price-row"><span>Ημιμόνιμο manicure</span><strong>από 18€</strong></div>
-        <div class="price-row"><span>Gel ενίσχυση</span><strong>από 28€</strong></div>
-        <div class="price-row"><span>Pedicure</span><strong>από 22€</strong></div>
-        <div class="price-row"><span>Nail art / σχέδια</span><strong>κατόπιν συνεννόησης</strong></div>
+      <div class="service-list">
+        <div class="service-list-row"><strong>Μανικιούρ</strong><span>περίπου 30 λεπτά</span></div>
+        <div class="service-list-row"><strong>Μανικιούρ ημιμόνιμο</strong><span>περίπου 1 ώρα</span></div>
+        <div class="service-list-row"><strong>Σχήμα και χρώμα απλό - χέρια</strong><span>περίπου 30 λεπτά</span></div>
+        <div class="service-list-row"><strong>Σχήμα και χρώμα ημιμόνιμο - χέρια</strong><span>περίπου 30 λεπτά</span></div>
+        <div class="service-list-row"><strong>Τεχνητά νύχια</strong><span>περίπου 2 ώρες</span></div>
+        <div class="service-list-row"><strong>Συντήρηση τεχνητών νυχιών</strong><span>περίπου 1 ώρα 30 λεπτά</span></div>
+        <div class="service-list-row"><strong>Πεντικιούρ</strong><span>περίπου 1 ώρα</span></div>
+        <div class="service-list-row"><strong>Πεντικιούρ ημιμόνιμο</strong><span>περίπου 1 ώρα</span></div>
+        <div class="service-list-row"><strong>Αποτρίχωση με κερί ή κλωστή</strong><span>ανάλογα με την υπηρεσία</span></div>
+        <div class="service-list-row"><strong>Lash lift / φρύδια / μακιγιάζ</strong><span>ανάλογα με την υπηρεσία</span></div>
       </div>
     </div>
   </section>
-  <!-- telos kodika price list -->
+  <!-- telos kodika service list -->
 
   <!-- arxi kodika gallery carousel -->
   <section id="gallery">
@@ -749,11 +765,12 @@
     </div>
 
     <div class="gallery-scroll">
-      <div class="gallery-card">Φωτογραφία νυχιών 1</div>
-      <div class="gallery-card">Φωτογραφία νυχιών 2</div>
-      <div class="gallery-card">Φωτογραφία νυχιών 3</div>
-      <div class="gallery-card">Φωτογραφία νυχιών 4</div>
-      <div class="gallery-card">Φωτογραφία νυχιών 5</div>
+      <div class="gallery-card"><img src="https://scontent.fath6-1.fna.fbcdn.net/v/t51.82787-15/696630028_18075423044641822_3110679806801152266_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_M7ChHiQ40AQ7kNvwE3iyN1&_nc_oc=AdqUSc3ndhvBR0qgYFtgO2VaNFJDgyGuR3G3FfSf5peEzFdULssLLuxpDpE3irlHqejh6GG3CcOAnKjVPEEspyGu&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=y3DMVgl22WAsNysDmHhADg&_nc_ss=7b2a8&oh=00_Af6j0BBjOug3Fkir18XY0GcmVAo58q7RF04WRwZlRKpStg&oe=6A1D6713" alt="Nails Naysa Nail Bar"></div>
+      <div class="gallery-card"><img src="https://scontent.fath6-1.fna.fbcdn.net/v/t51.82787-15/539608802_18045186878641822_2186016833282267642_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4ACPep0vz6IQ7kNvwEOpy6m&_nc_oc=AdoyFZIZM3L3myAwTg0fJ0_so9LIVIubkYYyeMJqaMbLVkRHmjg4-6g8Yi0YiF8cjbeuzppnlxWIyIWXlx15-_y_&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=OJ--BySq26KxMu2jrcwKpQ&_nc_ss=7b2a8&oh=00_Af6qZDTIoZ66OlYT3riiIi1Jr9x9MN2FC-vOkvIAdkMHLw&oe=6A1D4244" alt="Nail art Naysa Nail Bar"></div>
+      <div class="gallery-card"><img src="https://scontent.fath6-1.fna.fbcdn.net/v/t51.82787-15/531255429_18043374203641822_8835346807876791784_n.jpg?stp=dst-jpg_s565x565_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dVd5i2V1rdoQ7kNvwE1etHk&_nc_oc=AdoaBwqhxnPshMwt_qo6kub_UHE9fZoq9zymMxfI0qG3F_98OJLVsHCe8x4b8dnidwVMxBzhZgvxU-DBiE-Lzgme&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=yW3ORjGWjGzU2AvNmYXPeA&_nc_ss=7b2a8&oh=00_Af6VwEc-eZH_bI_gQeEb4nq2UmkVQVsssQEwUv9g8Xx7ZA&oe=6A1D5948" alt="Manicure Naysa Nail Bar"></div>
+      <div class="gallery-card"><img src="https://scontent.fath6-1.fna.fbcdn.net/v/t51.75761-15/506015657_18038373221641822_1947643168628324048_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UL4y7EOeciIQ7kNvwGhOohb&_nc_oc=AdoOD3MubbF1xOOZjSbQvINFqX3s4moGxMgfqKd0Q9poJmx8QCqvHwVfBR7PloYmGG36UtQ9BmK1Cc82AABMLSon&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=SBkuleD8DGkTMuZ076Mj9A&_nc_ss=7b2a8&oh=00_Af4ulPhWq0ZMktDRiRc8660UnbXmGuQsNetM9YTxytOh6w&oe=6A1D4348" alt="Nails Νέα Ιωνία"></div>
+      <div class="gallery-card"><img src="https://scontent.fath6-1.fna.fbcdn.net/v/t51.75761-15/510961870_18038177468641822_88987239286164230_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HKBkgP0c1hcQ7kNvwFRiOLC&_nc_oc=AdoQRGuH0HDuSsFhvjmdHcyZcYrjlRTFQzyzHLalErhmCEcsFhOS6fi5v7uWZq3OFLtOhaDsNv_DcpsJNO6cIa4p&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=SBkuleD8DGkTMuZ076Mj9A&_nc_ss=7b2a8&oh=00_Af4gqWMfaDpgAFkNwyXJmKsXTVdoSM-oBMZMQua6gJ0fpA&oe=6A1D614F" alt="Ημιμόνιμο Naysa Nail Bar"></div>
+      <div class="gallery-card"><img src="https://scontent.fath6-1.fna.fbcdn.net/v/t39.30808-6/471231512_601479302270909_501986844486880273_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=BjoyS8PyhWwQ7kNvwF8od9w&_nc_oc=Adpz2PD5kgxkalUAEiQnPO3PWbBMCwgjE95PaKamvdk0ULRnENRqHR11B7KSFHKG71HVAjZFlaami_8YW9GPVFT3&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=nWmRQzqo1lSbTm27eKWwCg&_nc_ss=7b2a8&oh=00_Af60yk-QBFXmQWwXtycyytYZxVObKPe2EPq9UI4CsFdQAw&oe=6A1D4F16" alt="Naysa Nail Bar work"></div>
     </div>
   </section>
   <!-- telos kodika gallery carousel -->
@@ -763,19 +780,31 @@
     <div class="container">
       <div class="section-title">
         <h2>Κριτικές πελατισσών</h2>
-        <p>Οι κριτικές μπορούν να μπουν χειροκίνητα ή αργότερα να συνδεθούν με Google Reviews.</p>
+        <p>4,9 αστέρια στο Google με 126 αξιολογήσεις.</p>
       </div>
     </div>
 
     <div class="reviews-marquee">
       <div class="reviews-track">
-        <div class="review"><div class="stars">★★★★★</div><p>Πολύ καθαρός χώρος, ευγενική εξυπηρέτηση και άψογο αποτέλεσμα.</p><div class="review-name">Μαρία Κ.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>Τα νύχια μου κράτησαν υπέροχα και το αποτέλεσμα ήταν ακριβώς αυτό που ήθελα.</p><div class="review-name">Ελένη Π.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>Πολύ προσεγμένη δουλειά, χωρίς βιασύνη και με λεπτομέρεια.</p><div class="review-name">Άννα Σ.</div></div>
+        <a class="review" href="https://www.google.com/search?sca_esv=fd9128bd119c9691&rlz=1C1OZZY_enGR1215GR1215&sxsrf=ANbL-n6O0vJmtNi5kXAHZO5y2hFTEhNhtw:1779926143237&q=Naysa+nail+bar+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDIHQgtjU1MTSwtzcwsTAwOzDYyMrxjV_RIrixMV8hIzcxSSEosUzk08t-_cznP7z-0G4s3n1p1vPrf13M7zTYtYiVUJAPbWBRFvAAAA&rldimm=12727283554987784006&tbm=lcl&hl=el-GR&sa=X&ved=2ahUKEwiH1vnL1dqUAxVTRvEDHb82CekQ9fQKegQILxAG#lkt=LocalPoiReviews" target="_blank">
+          <div class="stars">★★★★★</div><p>Δεν έχω ξαναδεί τόσο όμορφα τα νύχια μου! Η διάρκεια των τεχνητών νυχιών είναι ξεκάθαρα παραπάνω από μήνα.</p><div class="review-name">Evi Kourva</div>
+        </a>
 
-        <div class="review"><div class="stars">★★★★★</div><p>Πολύ καθαρός χώρος, ευγενική εξυπηρέτηση και άψογο αποτέλεσμα.</p><div class="review-name">Μαρία Κ.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>Τα νύχια μου κράτησαν υπέροχα και το αποτέλεσμα ήταν ακριβώς αυτό που ήθελα.</p><div class="review-name">Ελένη Π.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>Πολύ προσεγμένη δουλειά, χωρίς βιασύνη και με λεπτομέρεια.</p><div class="review-name">Άννα Σ.</div></div>
+        <a class="review" href="https://www.google.com/search?sca_esv=fd9128bd119c9691&rlz=1C1OZZY_enGR1215GR1215&sxsrf=ANbL-n6O0vJmtNi5kXAHZO5y2hFTEhNhtw:1779926143237&q=Naysa+nail+bar+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDIHQgtjU1MTSwtzcwsTAwOzDYyMrxjV_RIrixMV8hIzcxSSEosUzk08t-_cznP7z-0G4s3n1p1vPrf13M7zTYtYiVUJAPbWBRFvAAAA&rldimm=12727283554987784006&tbm=lcl&hl=el-GR&sa=X&ved=2ahUKEwiH1vnL1dqUAxVTRvEDHb82CekQ9fQKegQILxAG#lkt=LocalPoiReviews" target="_blank">
+          <div class="stars">★★★★★</div><p>Οι κοπέλες εκτός από χαμογελαστές και ευδιάθετες, είναι φοβερές τεχνίτριες. Το περιβάλλον είναι πολύ όμορφο.</p><div class="review-name">Xristina Stavropoulou</div>
+        </a>
+
+        <a class="review" href="https://www.google.com/search?sca_esv=fd9128bd119c9691&rlz=1C1OZZY_enGR1215GR1215&sxsrf=ANbL-n6O0vJmtNi5kXAHZO5y2hFTEhNhtw:1779926143237&q=Naysa+nail+bar+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDIHQgtjU1MTSwtzcwsTAwOzDYyMrxjV_RIrixMV8hIzcxSSEosUzk08t-_cznP7z-0G4s3n1p1vPrf13M7zTYtYiVUJAPbWBRFvAAAA&rldimm=12727283554987784006&tbm=lcl&hl=el-GR&sa=X&ved=2ahUKEwiH1vnL1dqUAxVTRvEDHb82CekQ9fQKegQILxAG#lkt=LocalPoiReviews" target="_blank">
+          <div class="stars">★★★★★</div><p>Υπέροχη εξυπηρέτηση από τα κορίτσια. Μου έφτιαξαν πολύ όμορφα νύχια με διάρκεια.</p><div class="review-name">Sofia Seinti</div>
+        </a>
+
+        <a class="review" href="https://www.google.com/search?sca_esv=fd9128bd119c9691&rlz=1C1OZZY_enGR1215GR1215&sxsrf=ANbL-n6O0vJmtNi5kXAHZO5y2hFTEhNhtw:1779926143237&q=Naysa+nail+bar+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDIHQgtjU1MTSwtzcwsTAwOzDYyMrxjV_RIrixMV8hIzcxSSEosUzk08t-_cznP7z-0G4s3n1p1vPrf13M7zTYtYiVUJAPbWBRFvAAAA&rldimm=12727283554987784006&tbm=lcl&hl=el-GR&sa=X&ved=2ahUKEwiH1vnL1dqUAxVTRvEDHb82CekQ9fQKegQILxAG#lkt=LocalPoiReviews" target="_blank">
+          <div class="stars">★★★★★</div><p>Μου το πρότεινε μια φίλη μου και είμαι πολύ χαρούμενη που πήγα. Το αποτέλεσμα ήταν εξαιρετικό.</p><div class="review-name">Ντάρια Μπόμποτχ</div>
+        </a>
+
+        <a class="review" href="https://www.google.com/search?sca_esv=fd9128bd119c9691&rlz=1C1OZZY_enGR1215GR1215&sxsrf=ANbL-n6O0vJmtNi5kXAHZO5y2hFTEhNhtw:1779926143237&q=Naysa+nail+bar+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDIHQgtjU1MTSwtzcwsTAwOzDYyMrxjV_RIrixMV8hIzcxSSEosUzk08t-_cznP7z-0G4s3n1p1vPrf13M7zTYtYiVUJAPbWBRFvAAAA&rldimm=12727283554987784006&tbm=lcl&hl=el-GR&sa=X&ved=2ahUKEwiH1vnL1dqUAxVTRvEDHb82CekQ9fQKegQILxAG#lkt=LocalPoiReviews" target="_blank">
+          <div class="stars">★★★★★</div><p>Άψογη δουλειά και τα κορίτσια όλα πολύ ευγενικά και εξυπηρετικά. Σωστές επαγγελματίες.</p><div class="review-name">Χριστίνα Σεϊντή</div>
+        </a>
       </div>
     </div>
   </section>
@@ -785,9 +814,14 @@
   <section id="booking">
     <div class="container">
       <div class="booking-box">
-        <h2>Κλείστε το επόμενο ραντεβού σας online.</h2>
-        <p>Επιλέξτε την υπηρεσία που θέλετε και κλείστε εύκολα το ραντεβού σας μέσω Treatwell.</p>
-        <a class="btn-main" href="https://www.treatwell.gr/" target="_blank">Κλείσε μέσω Treatwell</a>
+        <h2>Δείτε τις υπηρεσίες μας στο Treatwell.</h2>
+        <p>
+          Επισκεφθείτε το προφίλ του Naysa Nail Bar στο Treatwell για να δείτε αναλυτικά
+          τις υπηρεσίες, τις διάρκειες και τις διαθέσιμες επιλογές.
+        </p>
+        <a class="btn-main" href="https://www.treatwell.gr/katasthma/naysa-nail-bar/" target="_blank">
+          Επισκεφθείτε το Treatwell
+        </a>
       </div>
     </div>
   </section>
@@ -797,13 +831,13 @@
   <section id="socials">
     <div class="container">
       <div class="social-box">
-        <h2>Μπορείτε να μας βρείτε και στα social.</h2>
-        <p>Ακολουθήστε μας για νέες δημιουργίες, ιδέες και διαθέσιμα ραντεβού.</p>
+        <h2>Βρείτε μας στα social.</h2>
+        <p>Ακολουθήστε μας για νέες δημιουργίες, ιδέες και στιγμές από το Naysa Nail Bar.</p>
 
         <div class="socials">
-          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-          <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+          <a href="https://www.instagram.com/naysanailbar/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/p/Naysa-nail-bar-100072529141329/" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@naysa.nail.bar" target="_blank">TikTok</a>
         </div>
       </div>
     </div>
@@ -815,13 +849,14 @@
     <div class="container contact-grid">
       <div class="contact-card">
         <h2>Επικοινωνία</h2>
-        <p><strong>Διεύθυνση:</strong> Οδός Παραδείγματος 12, Αθήνα</p>
-        <p><strong>Τηλέφωνο:</strong> 210 0000000</p>
-        <p><strong>Viber:</strong> 690 0000000</p>
+        <p><strong>Διεύθυνση:</strong> Ελ. Βενιζέλου 132, Νέα Ιωνία 142 31</p>
+        <p><strong>Τηλέφωνο:</strong> 21 0271 6128</p>
+        <p><strong>Email:</strong> naysanailbar@gmail.com</p>
+        <p><strong>Viber:</strong> Θα προστεθεί σύντομα</p>
 
         <div class="hero-buttons" style="margin-top: 22px;">
-          <a class="btn-main" href="https://www.treatwell.gr/" target="_blank">Ραντεβού</a>
-          <a class="btn-light" href="viber://chat?number=%2B306900000000">Viber</a>
+          <a class="btn-main" href="https://www.treatwell.gr/katasthma/naysa-nail-bar/" target="_blank">Treatwell</a>
+          <a class="btn-light" href="mailto:naysanailbar@gmail.com">Email</a>
         </div>
       </div>
 
@@ -829,18 +864,18 @@
         <h2>Ωράριο</h2>
 
         <div class="hours-list">
-          <div class="hour-row"><strong>Δευτέρα</strong><span>10:00 - 18:00</span></div>
+          <div class="hour-row"><strong>Δευτέρα</strong><span>Κλειστά</span></div>
           <div class="hour-row"><strong>Τρίτη</strong><span>10:00 - 20:00</span></div>
-          <div class="hour-row"><strong>Τετάρτη</strong><span>10:00 - 18:00</span></div>
+          <div class="hour-row"><strong>Τετάρτη</strong><span>10:00 - 20:00</span></div>
           <div class="hour-row"><strong>Πέμπτη</strong><span>10:00 - 20:00</span></div>
           <div class="hour-row"><strong>Παρασκευή</strong><span>10:00 - 20:00</span></div>
-          <div class="hour-row"><strong>Σάββατο</strong><span>10:00 - 15:00</span></div>
+          <div class="hour-row"><strong>Σάββατο</strong><span>09:00 - 17:00</span></div>
           <div class="hour-row"><strong>Κυριακή</strong><span>Κλειστά</span></div>
         </div>
       </div>
 
       <div class="map-box">
-        Βάλε εδώ Google Maps iframe
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.9828095314697!2d23.74800667644671!3d38.04748689640291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a387ae9997e7%3A0xb0a064f612b7b746!2sNaysa%20nail%20bar!5e0!3m2!1sel!2sgr!4v1779927601183!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -849,7 +884,7 @@
   <!-- arxi kodika footer -->
   <footer>
     <div class="container">
-      © 2026 Nail Studio. All rights reserved.
+      © 2026 Naysa Nail Bar. All rights reserved.
     </div>
   </footer>
   <!-- telos kodika footer -->
